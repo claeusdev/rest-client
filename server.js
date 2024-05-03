@@ -15,7 +15,10 @@ app.get("/hey", (req, res) => {
 	}
 	res.status(200).json(jsonData)
 })
-
+app.post("/hey", (req, res) => {
+	console.log({ r: req.body })
+	res.status(200).json(req.body)
+})
 app.listen(3000, () => {
 	console.log("running on port 3000")
 })
